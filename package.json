@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Game for Dinner",
   "main": "index.js",
-  "homepage": "https://GiuseppeBondii.github.io/ccd311224",
+"homepage": "https://giuseppebondii.github.io/ccd311224",
   "scripts": {
   "start": "react-scripts start",
   "build": "react-scripts build",

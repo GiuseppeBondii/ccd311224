@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
@@ -12,7 +11,7 @@ import RiccardoMari45 from "./components/people/RiccardoMari45";
 
 function App() {
   return (
-    <Router basename="/ccd311224">  
+    <Router basename="/ccd311224">  {/* Aggiungi il basename corretto */}
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
