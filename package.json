@@ -1,5 +1,5 @@
 {
-  "name": "game-4-dinner",
+  "name": "ccd311224",
   "version": "1.0.0",
   "description": "Game for Dinner",
   "main": "index.js",
@@ -13,10 +13,6 @@
   "deploy": "gh-pages -d build"
 },
   "author": "GiuseppeBondii",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GiuseppeBondii/ccd311224/issues"
-  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
