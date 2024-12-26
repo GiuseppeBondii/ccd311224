@@ -10,23 +10,20 @@ import MattiaPressiani43 from './components/people/MattiaPressiani43';
 import SofiaComerci44 from "./components/people/SofiaComerci44";
 import RiccardoMari45 from "./components/people/RiccardoMari45";
 
-
-function App(){
-    return (
-        <Router>
+function App() {
+  return (
+    <Router basename="/ccd311224">  
       <div>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/GiuseppeBondi42" element={<GiuseppeBondi42/>} />
-          <Route path="/MattiaPressiani43" element={<MattiaPressiani43/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/GiuseppeBondi42" element={<GiuseppeBondi42 />} />
+          <Route path="/MattiaPressiani43" element={<MattiaPressiani43 />} />
           <Route path="/SofiaComerci44" element={<SofiaComerci44 />} />
           <Route path="/RiccardoMari45" element={<RiccardoMari45 />} />
-          
-
-
         </Routes>
       </div>
- </Router>
-    );
+    </Router>
+  );
 }
+
 export default App;
