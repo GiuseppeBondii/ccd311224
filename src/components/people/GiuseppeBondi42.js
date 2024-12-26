@@ -9,7 +9,7 @@ function GiuseppeBondi42() {
 
     const QestAns = [
         { Question: "Come ti chiami?", Answer: "Giuseppe" },
-        { Question: "Come si chiama la tua sorella piccola?", Answer: "Elena" }
+        { Question: "Come si chiama la tua sorella piccola?", Answer: "Elena" },
         { Question: "Come si chiama la tua sorella Grande?", Answer: "Elisabettta" }
 
     ];
