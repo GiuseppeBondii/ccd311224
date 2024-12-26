@@ -11,7 +11,7 @@ import RiccardoMari45 from "./components/people/RiccardoMari45";
 
 function App() {
   return (
-    <Router basename="/">  {/* Aggiungi il basename corretto */}
+    <Router basename="/">  
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
