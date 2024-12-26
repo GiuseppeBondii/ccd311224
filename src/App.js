@@ -11,14 +11,14 @@ import RiccardoMari45 from "./components/people/RiccardoMari45";
 
 function App() {
   return (
-    <Router basename="/ccd311224">  {/* Aggiungi il basename corretto */}
+    <Router basename="/">  {/* Aggiungi il basename corretto */}
       <div>
         <Routes>
-          <Route path="./" element={<Home />} />
-          <Route path="./GiuseppeBondi42" element={<GiuseppeBondi42 />} />
-          <Route path="./MattiaPressiani43" element={<MattiaPressiani43 />} />
-          <Route path="./SofiaComerci44" element={<SofiaComerci44 />} />
-          <Route path="./RiccardoMari45" element={<RiccardoMari45 />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/GiuseppeBondi42" element={<GiuseppeBondi42 />} />
+          <Route path="/MattiaPressiani43" element={<MattiaPressiani43 />} />
+          <Route path="/SofiaComerci44" element={<SofiaComerci44 />} />
+          <Route path="/RiccardoMari45" element={<RiccardoMari45 />} />
         </Routes>
       </div>
     </Router>
