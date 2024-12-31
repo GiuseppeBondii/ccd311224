@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function FrancescoRomagnoli51() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "FrancescoRomagnoli51";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Ti presenti con tutti. Un presente in particolare ti farà domande sul meteo quando gli dici di essere il manutentore della casa. È convinto stia per arrivare una forte nevicata e tu gli dirai che effettivamente tra 20 minuti dovrebbe nevicare. Chi?", Answer: "Ermanno Zavarise" },
+        { Question: "Lo rassicuri. É normale che in questo periodo ci siano forti precipitazioni. Tra 15 minuti andrai a fumarti una sigaretta fuori e constaterai a tutti i presenti che nevica e fino a quando non smette sarà impossibile fare e ricevere chiamate e che il traffico dati sarà interrotto per ragioni di sicurezza. Non ci saranno però problemi con la rete elettrica. Inizialmente forse qualcuno ti risulterà perplesso per cui prometti che nel caso succeda qualcosa ti precipiterai ad sistemare la situazione dato che è il tuo lavoro. Stai pronto ad eventuali interventi. Ad un certo punto comparirà un codice preceduto da ##, qual’é?", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +31,9 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Non sai cosa fare. Si creerà del casino. Prendi in mano la situazione e fai in modo 
+                Proponi che ordinatamente, uno alla volta si dica quello che si sà per non creare caos e, quando nessuno ha piu nulla da aggiungere, indici una votazione democratica per decidere chi chiudere in uno sgabuzzino fino all’arrivo della polizia.
             </h2>;
         }
     
@@ -47,7 +46,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +64,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default FrancescoRomagnoli51;

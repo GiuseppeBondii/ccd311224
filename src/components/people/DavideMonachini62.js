@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function DavideMonachini62() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "DavideMonachini62";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Accogli i tuoi ospiti. Fai come da programma: all’ inizio antipasti vari in piedi, dove i tuoi ospiti si conosceranno tra loro con birra e vino e poi la cena. Giacomo Bucchi, dopo un po verrà a confidarsi con te per qualcosa di molto importante per lui e si lasci sfuggire qualche insulto a una persona in partiolare. Chi?", Answer: "Giuseppe Bondi" },
+        { Question: " Per distrarre Giacomo, inizi a parlare dei piatti della serata e insisti sulla ricetta dei cappelleti e gli racconti che il nome originario era Pienus Cappellus e che il ripieno era fatto con noci, macinato e formaggio. Dopo aver raccontato questo aneddoto, lui ti dice che una persona a lui vicina li preparava questo piatto con la ricetta originale. come si chiama questa persona? (nome)", Answer: "Ginevra" },
+        { Question: "Racconti a Giacomo che avevi intenzione di preparare il piatto con quella ricetta ma, dopo aver fatto la spesa, ti è arrivata la notizia che Giuseppe Bondi è allergico alle noci per cui le hai lasciate in dispensa. Giacomo ti sembra piu tranquillo per cui non ti fai più problemi. Ad un certo punto comparirà un codice numerico preceduto da ##, qual’è?", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +32,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Sei sconvolto. Combattuto se nascondere quello che sai o dirlo a tutti. Dopo un po cedi e quando vieni interpellato racconti quello che sai. Sarà davvero stato lui? Vuoi andare a fondo della questione e scoprire la verità.
             </h2>;
         }
     
@@ -47,7 +46,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +64,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default DavideMonachini62;

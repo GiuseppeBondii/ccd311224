@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function MargheritaRicchi61() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "MargheritaRicchi61";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
+        { Question: "Accogli gli ospiti. Scopri da voci che c’è il fratello della Maria Letizia Crispino. Dopo un po’ ti avi a presentare con lui, gli dici di conoscere sua sorella e che non vedevi l’ora di conoscere un altra parte della famiglia. Dopo due parole di presentazione ti sentirai in dovere di esprimerti riguardo al moroso di Maria, alla luce dei recenti fatti successi che hanno portato tuo marito a doverlo tirare fuori dai guai. Pensi logicamente che sia stato invitato da sua sorella a passare la serata con voi ma è stato invitato da un’ altra persona. chi?", Answer: "Alice Zoli" },
+        { Question: "La serata proseguirà tranquillamente e te aiuterai Davide con le mansioni da svolgere. Ad un certo punto, in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421" }
     ];
 
     useEffect(() => {
@@ -34,7 +32,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Hai paura. Chi è stato? Prova a scoprirlo con l’aiuto di tutti.
             </h2>;
         }
     
@@ -47,7 +46,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +64,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default MargheritaRicchi61;

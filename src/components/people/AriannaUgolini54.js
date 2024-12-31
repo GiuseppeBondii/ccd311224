@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function AriannaUgolini54() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "AriannaUgolini54";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Quando arriverai ti presenterai con tutti. Sei una sportiva per cui deciderai di andare a conoscere meglio un ragazzo quando verrai a sapere che a Maggio andrà a Nizza a fare una gara di Triathlon. Come si chiama questo ragazzo?", Answer: "Tommaso Domeniconi" },
+        { Question: "Decidi di confidarti con la tua amica Caterina Tonelli: gli dirai che vuoi conoscere meglio Tommaso Domeniconi e poco dopo lei ti dirà che ha riconosciuto un amico di infanzia alla serata e vuole andarci a parlare. Chi?", Answer: "Federico Angelelli" },
+        { Question: "Te ti interessi a Tommaso, lo conoscerai un po e per il resto passerai un serata tranquilla. Ad un certo punto comparirà un codice numerico preceduto da ##, qual’è?", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +32,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Sei sconvolta. Prova a capire con gli altri cos’è successo. Chi è stato?
             </h2>;
         }
     
@@ -47,7 +46,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +64,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default AriannaUgolini54;

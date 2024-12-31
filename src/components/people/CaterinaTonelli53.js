@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function CaterinaTonelli53() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "CaterinaTonelli53";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Ti presenti un po con tutti. Arianna Ugolini ad un certo punto verra a cercarti per dirti che vuole conoscere meglio un raggazzo, come si chiama? ", Answer: "Tommaso Domeniconi" },
+        { Question: "Anche te hai notato una persona alla serata che non ti aspettavi di conoscere, Federico Angelelli, tuo amico di infanzia, dillo ad Arianna. Se sta parlando con una ragazza bionda aspetti, poi gli vai a parlare. Vai a fargli domande generali su cosa sta facendo nella vita ecc. Lui ti dirà che oltre a te conosce un altra persona alla serata, con cui ha un rapporto “strano”, Chi?", Answer: "Anna Cucinella" },
+        { Question: "Ti insospettisci un po ma lasci correre. Passerai una serata tranquilla. Ad un certo punto comparirà un codice numerico preceduto da ##, qual’è?", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +32,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                sei sconvolta. Racconta quello che sai per provare a capire con gli altri cos’è successo.
             </h2>;
         }
     
@@ -47,7 +46,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +64,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default CaterinaTonelli53;

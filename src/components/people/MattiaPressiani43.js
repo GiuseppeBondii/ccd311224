@@ -31,7 +31,11 @@ function MattiaPressiani43() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2>Complimenti! Hai completato tutte le domande.</h2>;
+            return <h2>All inizio come prima cosa devi parlare con tony come da storia. Di seguito l’obbiettivo di tony: Ti presenti un po con tutti, quando ti imbatti in Mattia Pressiani, insisti di andare a parlare con lui in privato e andate. Restate a parlare qualche minuto. Qualcuno verrà da voi a fare domande sul vostro passato. Chi? (Giuseppe Bondi)
+
+            poi durante la cena vedi il coso di giornale e vai ancora da tony:
+            Parli con francesca e passate la serata assieme. vi conoscete meglio e, quando sarà il momento di sedersi a tavola, decidete di sedervi uno a fianco all’altro. Durante la cena verrà qualcuno a interromperti per palare in privato. ti alzi e senti cosa ha da dire questa persona. chi è? (mattia pressiani) 
+            </h2>;
         }
     
         const handleSubmit = (event) => {

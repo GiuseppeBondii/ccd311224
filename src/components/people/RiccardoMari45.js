@@ -8,11 +8,10 @@ function RiccardoMari45() {
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "ENTRI CON DOME, DOPO QUALCHE PRESENTAZIONE, GLI DICI DI VOLERCI PROVARE CON UNA TIPA, LA SOFIA COMERCI, ANCHE DOME TI INDICHERÀ UNA RAGAZZA CON CUI VORREBBE PROVARCI, CHI? (Nome e Cognome)", Answer: "SOFIA COMERCI" },
-        { Question: "COMUNQUE NON TIRI INDIETRO E VAI A PARLARCI FAI IL GENTILE, DOVRAI PORGERLE UN BICCHIERE PER AVERE LA SUA ATTENZIONE. PARLERETE FINO A QUANDO LEI DOVRÀ ANDARE IN UN POSTO, DOVE? ", Answer: "Bagno" },
-        { Question: "LA SOFIA È ANDATA IN BAGNO. TE RIMANI COME UN POLLO A BRETI IL TUO VINO. A UNA CERTA UNA RAGAZZA VERRÀ A PARLARTI PORTANDOTI UN BICCHIERE DI BIRRA. CHI? (SOPRANNOME)", Answer: "CIARUZ" },
-        { Question: "P’TOST CHE NINT L’È MEJI P’TOST, INTRATIENI LA CONVERSAZIONE.  LA SERATA PROSEGUIRÀ TRANQUILLAMENTE FINO A QUANDO IN UN MODO O NELL’ ALTRO COMPARIRÀ UN CODICE NUMERICO PRECEDUTO DA ##, QUALE? CODE", Answer: "2421" }
-
+        { Question: "Entri con Tommaso Domeniconi, dopo qualche presentazione, gli dici di volerci provare con la Sofia Comerci. Anche Tommaso ti indicherà una ragazza con cui ci vorrebbe provare, chi?", Answer: "Sofia Comerci" },
+        { Question: "tommaso ti da il via libera quindi vai a parlarci, fai il gentile ma dovrai porgerle un bicchiere di vino per avere la sua attenzione. Insisti.Parlerete fino a quando non ti dira di dover andare in una stanza della casa e se ne andrà, Dove?", Answer: "Bagno" },
+        { Question: "Sofia è andata in bagno e te rimani come un pollo a berti il tuo vino. A una certa una ragazza verrà a parlarti portandoti un bicchiere di birra, Chi?", Answer: "Chiara Cova" },
+        { Question: "Ti accontenti e intrattieni la conversazione. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421" }
     ];
 
     useEffect(() => {
@@ -35,15 +34,7 @@ function RiccardoMari45() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2>PROVI A CAPIRE COS È SUCCESSO.
-                <br></br>
-            CHI È STATO?
-            <br></br>
-            QUALCUNO L’ HA AIUTATO? SE SI, CHI?
-            <br></br>
-            COME L’HA UCCISO?
-            <br></br>
-            PERCHE?
+            return <h2>Prova a capire cosa stia succedendo. Appoggia una linea di indagine ordinata e democratica.
             </h2>;
         }
     

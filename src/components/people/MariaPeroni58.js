@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function MariaPeroni58() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "MariaPeroni58";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Ti presenti un po con tutti. Arriverà un ragazzo dopo un po che ti porgerà un bicchiere di vino o di birra e ti chiederà se è successo qualcosa, le sembri strana, chi è? ", Answer: "Ermanno Zavarise" },
+        { Question: "Dopo un po di convenevoli decidi di raccontargli la tua storia. Lui ti ascolterà e si mostrerà comprensivo. Dopo questo incontro, la serata proseguirà tranquillamente fin quando non comparirà un codice preceduto da ##. qual’è? ", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +31,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Ti sentirai in difetto per aver pensato di fare del male al defunto. Qualcuno ti attaccherà. difenditi come puoi e prova a ragionare con gli altri per capire cosa sia successo realmente.
             </h2>;
         }
     
@@ -47,7 +45,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +63,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default MariaPeroni58;

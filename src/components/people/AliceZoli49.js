@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function AliceZoli49() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "AliceZoli49";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
+        { Question: "Ti presenti con tutti e tieni sempre sott’occhio Alessandro Crispino. Quando lo vedi parlare animatamente con una ragazza ti ingelosisci e te ne vai. Chi è questa ragazza?", Answer: "Margherita Ricchi" },
+        { Question: "Sconfortata, ti fai da parte e vai a parlare con Anna Cucinella, che ti ha fatto una buona impressione. Tra tutto quello che ti racconta, capisci che nutre degli strani sospetti verso una persona in particolare. chi?", Answer: "Mattia Pressiani" },
+        { Question: "Non hai voglia di tornare a parlare con Alessandro, per cui ti interessi a Federico Angelelli. Gli porti un bicchiere di vino. Parlate un pò e ti dice di conosocere una persona in particolare. Anche te ti apri con lui e gli racconti della tua situazione sentimentale e gli dici di essere innamorata di Alessandro Crispino. A te comunque sembra strano che lui conosca quella persona che ti ha nominato e hai un presentimento... chi è questa persona?", Answer: "Anna Cucinella" },
+        { Question: "Hai capito bene. Federico Angelelli è in realtà l’amante di Anna. Tieni per te questo segreto fiunche a una certa comparirà un codice preceduto da ##. Qual’è questo codice?", Answer: "2421" }
     ];
 
     useEffect(() => {
@@ -34,7 +34,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                hai le idee confuse, prova a capire con gli altri cosa sia successo realmente.
             </h2>;
         }
     
@@ -47,7 +48,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +66,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default AliceZoli49;

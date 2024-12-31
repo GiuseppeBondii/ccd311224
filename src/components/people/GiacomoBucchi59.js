@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function GiacomoBucchi59() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "GiacomoBucchi59";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Quando arrivi inizi con le presentazioni. Dopo un po ti arriverà da qualcuno la voce che la Maria ha avuto in passato una breve storia con un presente che non conosci. chi è?", Answer: "Giuseppe Bondi" },
+        { Question: "Lasci stare per un po la situazione, fai come nulla fosse ma in realtà traspare una forte gelosia dai tuoi comportamenti. Resisterai fin quando sarà ora dei primi, a quel punto andrai a confidarti dallo chef, visto che è un tuo caro amico, e sfogati insultando Giuseppe con lui in privato.  A una certa Davide inizierà a parlare di altro per distrarti. Ti distrae con successo e inizia a parlarti di cucina. Di che piatto cita il nome origiale latino?", Answer: "Pienus Cappellus" },
+        { Question: "Chiedi allo chef se ha usato la ricetta originale o no, perche non senti il sapore delle noci e gli dici che Tua nonna Ginevra Bucchi li preparava in questo modo. Qualcuno è allergico a un ingerdiente della ricetta, quale? ", Answer: "Noci" },
+        { Question: "Fai finta di niente, fingiti piu tranquillo. Senza farti vedere vai in dispensa a cercare le noci che aveva comprato lo chef. Cè un codice scritto a penna sotto al pacchetto di noci, quale?", Answer: "1111" },
+        { Question: "frantumi le noci e le metti in un piatto che fai avere a Giuseppe senza farti vedere da nessuno. Fai il disinvolto, come non fosse successo niente. Vuoi solo fargli un dispetto di cattivo gusto. Ad un certo punto compare un codice preceduto da ##, Qual’ è il codice?", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +34,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Fai in modo che non si dubiti di te. Appoggia chi propone una soluzione democratica e ordinata. Ci sarà una votazione quando tutti avranno parlato. Fai in modo di non risultare colpevole
             </h2>;
         }
     
@@ -47,7 +48,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +66,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default GiacomoBucchi59;

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function MariaCrispino60() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "MariaCrispino60";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
+        { Question: "Quando arrivi ti presenti con tutti gli invitati che non conosci e saluti chi gia conosci. Vedrai una persona che, inizialmente non riconosci ma che ti fa ricordare che effettivamente avete avuto una breve storia di qualche notte anni prima. Ti viene a salutare e ti prova a ricordare di quando vi siete conosciuti.Chi è ?", Answer: "Giuseppe Bondi" },
+        { Question: "Siete rimasti in buoni rapporti per cui non hai problemi a parlarci o a parlare della strana coincidenza con gli altri. Lui è impegnato in una relazione per cui non ti fai particolari problemi. Ti prenderà in disparte una persona che ti vuole parlare di Giacomo, a proposito di qualcosa che ha appena scoperto. Ti mostra contraria e arrabbiata e per infastidirlo, raccontagli della storia che hai avuto con Giuseppe. Chi è questa persona? ", Answer: "Alessandro Crispino" },
+        { Question: "La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421" },
+        { Question: "Sei impaurita. Provi a capire cosa stia succedendo. Chi è stato? Fatti aiutare da tutti per scoprirlo. Qualcuno additerà una persona a te cara. Di chi si tratta?", Answer: "Giacomo Bucchi" }
     ];
 
     useEffect(() => {
@@ -34,7 +34,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Difendilo. Non può essersi spinto a tanto. Il tuo obbiettivo è che non venga indicato dalla maggioranza come colpevole.
             </h2>;
         }
     
@@ -47,7 +48,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +66,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default MariaCrispino60;

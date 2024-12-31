@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function AnnaCucinella63() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "AnnaCucinella63";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
+        { Question: "Noterai un comportamento strano di Mattia, che seppur non l’abbia mai visto prima, prende in disparte una persona e iniziano a parlare tra loro per qualche minuto. Chi è questa persona?", Answer: "Leonardo Antonelli" },
+        { Question: "Verrà da te dopo un po una ragazza che si lamenterà per questioni d’amore. Presa dal momento anche te le racconterai dei tuoi casini: le dici che stai tradendo Mattia ma non le dici che lo stai facendo con Federico Angelelli. Chi è questa ragazza?", Answer: "Alice Zoli" },
+        { Question: "Lasci stare. Continui ad evitare Federico Angelelli perché ti senti in imbarazzo. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421" }
     ];
 
     useEffect(() => {
@@ -34,7 +33,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Ci sarà qualcuno che ti additerà e verrai a conoscenza di segreti oscuri. sei impaurita. Com’è possibile che sia successo davvero? Provate a capire chi è stato e perchè
             </h2>;
         }
     
@@ -47,7 +47,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +65,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default AnnaCucinella63;

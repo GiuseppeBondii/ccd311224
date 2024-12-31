@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function FrancescaPilara47() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "FrancescaPilara47";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
+        { Question: "Hai vinto il concorso e hai chiesto a Chiara Cova di venire con te. Dopo esserti presentata con tutti, prendi Chiara da parte e digli di volerci provare con Leonardo Antonelli, lo conosci come regista e sai che è single. Anche Chiara dice di volerci provare con un tipo, chi?", Answer: "Riccardo Mari" },
+        { Question: "Tieni d’occhio Leonardo: sta parlando con altre due persone. quando uno dei due se ne va, pensi sia un buon momento per andare a parlarci. Chi delle due persone con cui stava parlando se n’è andato? ", Answer: "Giuseppe Bondi"},
+        { Question: "Dopo un po di chiacchiere, decidi con Leonardo di sederti uno a fianco all’altro durante la cena. A un certo punto qualcuno farà alzare Leonardo per parlare con lui in privato. Chi è?", Answer: "Mattia Pressiani"},
+        { Question: "Aspetti che Leonardo torni e gli chiedi, preoccupata cos’è successo. Leonardo non ti dirà molto ma sei comunque un po impaurita. Durante il proseguire della cena salterà fuori un codice preceduto da ##, qual’è?", Answer: "2421"}
     ];
 
     useEffect(() => {
@@ -34,7 +34,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Hai le idee confuse, prova a capire con gli altri cosa sia successo realmente.
             </h2>;
         }
     
@@ -71,4 +72,4 @@ function SofiaComerci44() {
     );
 }
 
-export default SofiaComerci44;
+export default FrancescaPilara47;

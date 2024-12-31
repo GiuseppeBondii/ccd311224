@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SofiaComerci44() {
+function FedericoAngelelli57() {
     const navigate = useNavigate();
-    const username = "SofiaComerci44";
+    const username = "FedericoAngelelli57";
     const [savedUser, setSavedUser] = useState("");
     const [level, setLevel] = useState(0);
 
     const QestAns = [
-        { Question: "Ti presenterai con tutti. Una persona in particolare, che non è il tuo moroso, farà il gentile con te, fin troppo. Capisci che si tratta di lui quando insiste a portarti un bicchiere di vino. Chi è? Quando hai capito che si tratta di lui chiacchieraci un pò, poi gli dici che devi andare in bagno e lì inserisci nome e cognome", Answer: "Riccardo Mari" },
-        { Question: "Stai un pò in bagno sperando che trovi altra compagnia. Quando torni dal bagno, tieniti occupata fin a quando Riccardo non trova un altra ragazza con cui parlare nel caso non l’avesse gia fatto. chi?", Answer: "Chiara Cova"},
-        { Question: "Racconta dell’approccio di Riccardo al tuo moroso. lui ti racconterà una storia “Divertente” successa tra lui e una ragazza presente che non conoscevi. chi è questa persona?", Answer: "Maria Letizia Crispino"},
-        { Question: "Sei un po gelosa ma lasci stare. La serata proseguirà tranquillamente fino a quando in un modo o nell’altro comparirà un codice numerico preceduto da ##, Qual’è il codice?", Answer: "2421"}
-    ];
+        { Question: "Ti presenti con tutti. Nessuno sa del tuo rapporto con Anna ma ti da fastidio che Mattia le stia attaccato. Noterai che una ragazza che non conosci sta parlando con Anna, bionda , anche lei occhi chiari, aspetti che finiscano di parlare e, un po per ripicca verso Anna un po perché ti piace, le vai a parlare. chi è?", Answer: "Alice Zoli" },
+        { Question: "Le parli un po e ti lasci sfuggire il fatto che anche tu conosci Anna, non approfondisci il discorso. Le chiedi della sua situazione sentimentale e lei ti risponde di essere innamorata di un ragazzo, chi?", Answer: "Alessandro Crispino" },
+        { Question: "Tagli il discorso e prosegui la serata con altri. Ti verra a fare domande una tua amica di infanzia. Te le racconterai di essere l’amante di Anna, hai alzato un po troppo il gomito e in fondo ti fidi di lei. Dopo qualche convenevole continuerà la serata e ad un certo punto comparirà un codice preceduto da ##, qual’è?", Answer: "2421" }    ];
 
     useEffect(() => {
         const storedUser = localStorage.getItem("saveduser");
@@ -34,7 +32,8 @@ function SofiaComerci44() {
 
     function QestAndReply() {
         if (level >= QestAns.length) {
-            return <h2 className="question">Sei impaurita. Provi a capire cosa stia succedendo. Fai una scenata indecente. chi è stato????? fatti aiutare da tutti per scoprirlo.
+            return <h2 className="question">
+                Dici quello che sai. Provi a capire cosa sia successo.
             </h2>;
         }
     
@@ -47,7 +46,7 @@ function SofiaComerci44() {
                 const nextLevel = level + 1;
                 setLevel(nextLevel);
                 localStorage.setItem("storedQuestion", nextLevel);
-                event.target.reset(); // Resetta il campo input
+                event.target.reset();
             } else {
                 alert("Risposta sbagliata! Riprova.");
             }
@@ -65,10 +64,9 @@ function SofiaComerci44() {
     }
     return (
         <div>
-           
             <QestAndReply />
         </div>
     );
 }
 
-export default SofiaComerci44;
+export default FedericoAngelelli57;
